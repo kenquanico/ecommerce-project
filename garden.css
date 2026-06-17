@@ -1,0 +1,305 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body, html {
+  width: 100%;
+  height: 100%;
+ 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: white; 
+  color: #f0f0e0;
+}   
+
+.ui-root {
+  padding-top: 60px;
+}
+
+.label1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #333;
+    font-size: 60px;
+    margin-top: 20px;
+    margin-left: 150px;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background:  #e87007;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 3px solid #333;
+  z-index: 1000;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e7e7d2;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+.nav-menu a {
+  margin: 0 12px;
+  color: #d4d4b0;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.nav-menu a:hover {
+  background: rgba(255,255,255,0.2);
+}
+.user-info {
+  display: flex;
+  align-items: center;
+}
+.user-info .currency {
+  margin-right: 16px;
+  font-size: 18px;
+}
+.btn-settings {
+  background: none;
+  border: none;
+  color: #d4d4b0;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.btn-settings:hover {
+  color: #fff;
+}
+
+.hero-header {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #e87007, #ffe033);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  flex-shrink: 0; 
+}
+
+.hero-header .hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.hero-header h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero-header p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #eeeeee;
+  opacity: 0.95;
+}
+
+.cta-button {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-size: 17px;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s, transform 0.2s;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #ffe85e;
+  transform: translateY(-2px);
+}
+
+.main-area {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.garden-view {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  background: url('textures/soil-pattern.png') repeat;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: inset 0 0 10px #7a9a6d;
+  flex-shrink: 0;
+}
+
+.garden-view .plot {
+  width: 120px;
+  height: 120px;
+  background: #5a7d5a;
+  border: 2px solid #274422;
+  border-radius: 8px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.garden-view .plot:hover {
+  background: #6a8e6a;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 320px;
+  background: #2f4b2d;
+  border: 3px solid #1f3a22;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 100;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+.overlay .shop-header {
+  font-size: 20px;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #e7e7d2;
+}
+.overlay .seed-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+.overlay .seed-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px;
+  background: #3c6a3b;
+  border-radius: 4px;
+}
+.overlay .seed-item span {
+  color: #e7e7d2;
+}
+.overlay .seed-item button {
+  background: #6a9e6c;
+  border: none;
+  padding: 6px 12px;
+  color: #f0f0e0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.overlay .shop-close {
+  margin-top: 16px;
+  width: 100%;
+  background: #a07c48;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .main-area {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .garden-view {
+    max-width: 100%;
+    padding: 10px;
+    gap: 10px;
+  }
+}
+.pet-gallery {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.pet-card {
+  background: #fff; 
+  border-radius: 20px;
+  width: 320px;      
+  padding: 30px;    
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  text-align: center;
+  color: #222;      
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pets {
+    color: #e87007;
+}
+
+.pet-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.3);
+}
+
+.pet-image {
+  width: 100%;
+  height: 280; 
+  overflow: hidden; 
+}
+
+.pet-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block; 
+}
+
+
+.pet-info {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 24px;    
+  padding: 0 12px;
+}
+
+.pet-name {
+  text-align: left;
+  margin-top: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.pet-price {
+  color: #e7090981; 
+    margin-top: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

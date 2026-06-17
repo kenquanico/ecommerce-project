@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Box Color Change</title>
+<script src="jquery.js"></script>
+<style>
+#box {
+  width: 150px;
+  height: 150px;
+  background-color: gray;
+  margin-bottom: 10px;
+}
+button {
+  padding: 10px 15px;
+  margin-right: 5px;
+}
+</style>
+</head>
+<body>
+
+<div id="box"></div>
+<button id="redBtn">Make Red</button>
+<button id="blueBtn">Make Blue</button>
+
+<script>
+$(function() {
+  $("#redBtn").click(function() {
+    $("#box").css("background-color", "red");
+  });
+  
+  $("#blueBtn").click(function() {
+    $("#box").css("background-color", "blue");
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #E0E0E0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: #1E1E1E;
+  border-bottom: 1px solid #2E2E2E;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.nav-link {
+  color: #E0E0E0;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00E5FF;
+}
+
+.btn-threads {
+  background-color: #00E5FF;
+  color: #121212;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-threads:hover {
+  background-color: #00bcd4;
+}
+
+.btn-outline-threads {
+  background: transparent;
+  color: #E0E0E0;
+  border: 1px solid #00E5FF;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  transition: 0.3s;
+}
+
+.btn-outline-threads:hover {
+  background-color: #00E5FF;
+  color: #121212;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(180deg, #1E1E1E, #121212);
+  height: 85vh;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #E0E0E0;
+}
+
+.hero-subtitle {
+  color: #B0B0B0;
+  margin-top: 0.5rem;
+}
+
+/* PRODUCTS */
+.section-title {
+  font-weight: 600;
+  color: #E0E0E0;
+}
+
+.product-card {
+  background: #1E1E1E;
+  border: 1px solid #2E2E2E;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: #2C2C2C;
+}
+
+.product-card h5 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: #B0B0B0;
+  margin-bottom: 0.8rem;
+}
+
+.product-card:hover {
+  border-color: #00E5FF;
+  transform: translateY(-5px);
+}
+
+/* WHY CHOOSE AURORA */
+.aurora-highlights {
+  background-color: #1A1A1A;
+  border-top: 1px solid #2E2E2E;
+  border-bottom: 1px solid #2E2E2E;
+}
+
+.highlight-box {
+  background-color: #1E1E1E;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #2E2E2E;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.highlight-box img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.highlight-box h5 {
+  font-size: 1.1rem;
+  color: #00E5FF;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-box p {
+  color: #B0B0B0;
+  font-size: 0.95rem;
+}
+
+.highlight-box:hover {
+  border-color: #00E5FF;
+  transform: translateY(-5px);
+}
+
+/* FOOTER */
+.footer {
+  background-color: #1E1E1E;
+  border-top: 1px solid #2E2E2E;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #B0B0B0;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer a:hover {
+  color: #00E5FF;
+}

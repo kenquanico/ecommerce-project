@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery CRUD</title>
+<style>
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #333;padding:8px;text-align:left}
+th{background:#f2f2f2}
+.delete-btn{color:red}
+.edit-btn{color:blue}
+</style>
+<script src="jquery.js"></script>
+<script>
+  $(function(){
+    $('#add').click(function() {
+    let name = $('#name').val();
+    let age = $('#age').val();
+
+    if(name && age) {
+      $("table").append(`
+        1
+      <tr>
+            <td class='n'>${name}</td>
+          <td class='a'>${age}</td>
+          <td>
+            <button class='edit-btn'>Edit</button>
+            <button class='delete-btn'>Delete</button>
+          </td>
+        </tr>
+      `)
+       $('#name').val("");
+       $('#name').val("");
+    }
+    })
+
+    $(document).on("click", ".delete-btn", function() {
+      $(this).closest("tr").remove();
+    })
+
+    $(document).on("click", ".edit-btn", function() {
+      let row = $(this).closest("tr")
+      let n = row.find(".n").text();
+      let a = row.find(".a").text();
+      row.html(`
+      <td><input class='en' value='${n}'></td>
+      <td><input class='ea' value='${a}'></td>
+      <td><button class='save-btn'>Save</button></td>
+      `)
+    })
+
+    $(document).on("click", ".save-btn", function() {
+      let row = $(this).closest("tr")
+      let n = row.find(".en").val();
+      let a = row.find(".ea").val();
+      row.html(`
+      <td class="n">${n}</td>
+      <td class="a">${a}</td>
+      <td>
+      <button class="edit-btn">Edit</button>
+      <button class="delete-btn">Delete</button>
+      </td>
+      `)
+    })
+
+  })
+</script>
+</head>
+<body>
+
+<h1>Student Table</h1>
+
+<div class="input-fields">
+  <input type="text" id="name" placeholder="Enter student name">
+  <input type="text" id="age" placeholder="Enter student age">
+  <button id="add">Submit</button>
+</div>
+
+<h2>Student list:</h2>
+
+<table>
+<tr>
+  <th>Name</th>
+  <th>Age</th>
+  <th>Action</th>
+</tr>
+<tr>
+  <td class="n">Alice</td>
+  <td class="a">24</td>
+  <td>
+    <button class="edit-btn">Edit</button>
+    <button class="delete-btn">Delete</button>
+  </td>
+</tr>
+<tr>
+  <td class="n">Bob</td>
+  <td class="a">29</td>
+  <td>
+    <button class="edit-btn">Edit</button>
+    <button class="delete-btn">Delete</button>
+  </td>
+</tr>
+<tr>
+  <td class="n">Charlie</td>
+  <td class="a">31</td>
+  <td>
+    <button class="edit-btn">Edit</button>
+    <button class="delete-btn">Delete</button>
+  </td>
+</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2160 2160">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        filter: url(#outer-glow-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <filter id="outer-glow-2" x="109" y="146" width="1908" height="1818" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="20"/>
+      <feFlood flood-color="#01efac" flood-opacity=".92"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="832.68" y1="206.96" x2="832.68" y2="1724.18" gradientUnits="userSpaceOnUse">
+      <stop offset=".19" stop-color="#2082a6"/>
+      <stop offset=".22" stop-color="#1e85a6"/>
+      <stop offset=".52" stop-color="#0eabaa"/>
+      <stop offset=".77" stop-color="#04c2ad"/>
+      <stop offset=".92" stop-color="#01cbae"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1700.12" y1="1378.6" x2="1700.12" y2="1868" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="143.58" y1="1193.6" x2="1954.79" y2="1193.6" gradientTransform="translate(-41.46 40.57) rotate(-2.14)" gradientUnits="userSpaceOnUse">
+      <stop offset=".17" stop-color="#a245de"/>
+      <stop offset=".46" stop-color="#472794"/>
+      <stop offset=".62" stop-color="#191970"/>
+      <stop offset=".68" stop-color="#17176a"/>
+      <stop offset=".77" stop-color="#13145a"/>
+      <stop offset=".86" stop-color="#0c0e3f"/>
+      <stop offset=".97" stop-color="#03061a"/>
+      <stop offset="1" stop-color="#00040d"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="527.84" y1="462.59" x2="778.51" y2="462.59" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#linear-gradient-3"/>
+  </defs>
+  <g class="cls-2">
+    <g>
+      <path class="cls-5" d="M645.29,1570.36l391.98-711.13,183.24,355.56c48.41-65.11,139.05-134.38,245.07-263.68l-410.15-744.17L199.77,1724.18c150.25-61.52,309.4-96.4,445.52-153.81Z"/>
+      <path class="cls-1" d="M1693.13,1378.6l263.87,489.4h-387.48l-126.27-244.7c90.24-78.83,175.8-158.55,249.88-244.7Z"/>
+    </g>
+    <g>
+      <path class="cls-3" d="M1406.77,504.9c874.16,193.82,667.27,658.62-486.73,1368.73l-748.09,29.26C1589.1,1235.18,1862.44,818,1399.03,625.67"/>
+      <path class="cls-4" d="M778.51,406.19l-13.95,113.97c-48.29-58.31-129.32-90.05-236.72-115.15"/>
+    </g>
+  </g>
+</svg>

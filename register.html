@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora Shop | Register</title>
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="register.css">
+  <script src="jquery.js"></script>
+  <script src="bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  
+<div id="myModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">×</button>
+<h4 class="modal-title">Modal Header</h4>
+</div>
+<div class="modal-body">
+<p>Some text in the modal.</p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+  <div class="page-wrapper d-flex flex-column min-vh-100">
+    <div class="d-flex justify-content-start p-3">
+      <img src="au.svg" alt="Logo" class="logo">
+    </div>
+
+    <div class="d-flex flex-column align-items-center justify-content-start flex-grow-1 pt-5">
+
+      <div class="form-box main-form" style="width: 380px;">
+        <h4 class="mb-4 text-center">Create Your Account</h4>
+        <form id="registerForm" novalidate>
+          <div class="mb-3">
+            <input type="text" id="fullname" class="form-control input-modern" placeholder="Full Name">
+          </div>
+          <div class="mb-3">
+            <input type="number" id="age" class="form-control input-modern" placeholder="Age">
+          </div>
+          <div class="mb-3">
+            <input type="email" id="email" class="form-control input-modern" placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <input type="password" id="password" class="form-control input-modern" placeholder="Password">
+          </div>
+          <div class="mb-3">
+            <select id="preference" class="form-select input-modern">
+              <option value="" disabled selected>Select Preference</option>
+              <option value="music">Music</option>
+              <option value="sports">Sports</option>
+              <option value="tech">Technology</option>
+              <option value="travel">Travel</option>
+            </select>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="terms">
+            <label for="terms" class="form-check-label">I Agree to Terms</label>
+          </div>
+          <button type="submit" class="btn btn-threads w-100 mb-3">Register</button>
+        </form>
+      </div>
+
+      <div class="form-box mt-3" style="width: 380px; text-align: center;">
+        <p class="label1 mb-0">Already have an account? 
+          <a href="login.html" class="text-dark-gray">Log in</a>
+        </p>
+      </div>
+
+      <footer class="footer py-3">
+  <div class="container text-center d-flex flex-wrap justify-content-center align-items-center gap-3">
+    <span>©2025 Aurora</span>
+    <a href="#">Terms</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Cookies Policy</a>
+    <a href="#">Report a Problem</a>
+  </div>
+</footer>
+
+
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $('#registerForm').submit(function(e) {
+        e.preventDefault();
+
+        const fullname = $('#fullname').val().trim();
+        const age = parseInt($('#age').val().trim());
+        const email = $('#email').val().trim();
+        const password = $('#password').val().trim();
+        const preference = $('#preference').val();
+        const terms = $('#terms').is(':checked');
+
+        if (!fullname || !age || !email || !password || !preference) {
+          // $('#myModal').modal('show');
+          console.log("test");
+          $('#myModal').modal('toggle');
+          return;
+        }
+        
+        if (!terms) {
+          alert("You must agree to the terms.");
+          return;
+        }
+
+        if (age < 18) {
+          alert("You must be 18 or older.");
+          return;
+        }
+
+        if (!email.includes("@")) {
+          alert("Invalid email format.");
+          return;
+        }
+
+        const users = JSON.parse(localStorage.getItem("users") || "[]");
+
+        if (users.some(u => u.email === email)) {
+          alert("Email already registered.");
+          return;
+        }
+
+        if (confirm("Do you want to submit your registration?")) {
+          const user = { fullname, age, email, password, preference };
+          users.push(user);
+          localStorage.setItem("users", JSON.stringify(users));
+          alert("Registration successful! You will be redirected to login.");
+          window.location.href = "login.html";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

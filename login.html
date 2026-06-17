@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora Shop | Login</title>
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #333;
+      color: #121212;
+      margin: 0;
+    }
+
+    .page-wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+    }
+
+    .form-box {
+      background: #FFFFFF;
+      border: 1px solid #E0E0E0;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      color: #121212;
+    }
+
+    .main-form {
+      margin-top: -60px;
+    }
+
+    .btn-threads {
+      background-color: #121212;
+      color: #FAFAFA;
+      font-weight: 500;
+      border-radius: 8px;
+      padding: 0.6rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-threads:hover {
+      background-color: #2E2E2E;
+      color: #FAFAFA;
+    }
+
+    .text-dark-gray {
+      color: #121212;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .text-dark-gray:hover {
+      color: #555555;
+    }
+
+    .label1 {
+      color: #555555;
+    }
+
+    .footer {
+      background-color: #FAFAFA;
+      font-size: 12px;
+      color: #555555;
+    }
+
+    .footer a, .footer span {
+      color: #555555;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #00E5FF;
+    }
+
+    .input-modern,
+    .form-select {
+      background-color: #F5F5F5 !important;
+      color: #121212 !important;
+      border: 1px solid #CCCCCC !important;
+    }
+
+    .input-modern::placeholder {
+      color: #A0A0A0 !important;
+    }
+
+    .input-modern:focus,
+    .form-select:focus {
+      border-color: #00E5FF !important;
+      box-shadow: none !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper d-flex flex-column min-vh-100">
+    <div class="d-flex justify-content-start p-3">
+      <img src="au.svg" alt="Logo" class="logo">
+    </div>
+
+    <div class="d-flex flex-column align-items-center justify-content-start flex-grow-1 pt-5">
+      <div class="form-box main-form" style="width: 380px;">
+        <h4 class="mb-4 text-center">Login to Your Account</h4>
+        <form id="loginForm">
+          <div class="mb-3">
+            <input type="email" id="loginEmail" class="form-control input-modern" placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <input type="password" id="loginPassword" class="form-control input-modern" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-threads w-100 mb-3">Login</button>
+        </form>
+      </div>
+
+      <div class="form-box mt-3" style="width: 380px; text-align: center;">
+        <p class="label1 mb-0">Don't have an account? 
+          <a href="register.html" class="text-dark-gray">Register</a>
+        </p>
+      </div>
+
+      <footer class="footer py-3 mt-auto">
+        <div class="container text-center d-flex flex-wrap justify-content-center align-items-center gap-3">
+          <span>©2025 Aurora</span>
+          <a href="#">Terms</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookies Policy</a>
+          <a href="#">Report a Problem</a>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    $(document).rea
