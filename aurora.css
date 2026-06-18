@@ -4,6 +4,7 @@ body {
   color: #E0E0E0;
   margin: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .navbar {
@@ -25,6 +26,12 @@ body {
   color: #00E5FF;
 }
 
+.cart-count {
+  color: #E0E0E0;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
 .btn-threads {
   background-color: #00E5FF;
   color: #121212;
@@ -36,6 +43,7 @@ body {
 
 .btn-threads:hover {
   background-color: #00bcd4;
+  color: #121212;
 }
 
 .btn-outline-threads {
@@ -50,6 +58,12 @@ body {
 .btn-outline-threads:hover {
   background-color: #00E5FF;
   color: #121212;
+}
+
+.btn-outline-threads:disabled {
+  background-color: #00E5FF;
+  color: #121212;
+  opacity: 1;
 }
 
 /* HERO */
@@ -168,4 +182,34 @@ body {
 
 .footer a:hover {
   color: #00E5FF;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+    padding: 1rem 0;
+  }
+
+  .cart-count {
+    display: inline-block;
+    padding: 0.25rem 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero {
+    min-height: 72vh;
+    height: auto;
+    padding: 7rem 1rem 4rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .product-card {
+    height: auto;
+    min-height: 340px;
+  }
 }

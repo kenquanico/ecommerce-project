@@ -5,6 +5,7 @@ $(document).ready(function () {
     window.location.href = "login.html";
     return;
   }
+  currentUser.tasks = Array.isArray(currentUser.tasks) ? currentUser.tasks : [];
 
   function renderTasks() {
     $("#taskList").empty();
@@ -29,9 +30,9 @@ $(document).ready(function () {
     let index = users.findIndex(u => u.email === currentUser.email);
     if (index !== -1) {
       users[index] = currentUser;
-      localStorage.setItem("users", JSON.stringify(users));
-      localStorage.setItem("currentUser", JSON.stringify(currentUser));
     }
+    localStorage.setItem("users", JSON.stringify(users));
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
   }
 
   function deleteTask(index) {

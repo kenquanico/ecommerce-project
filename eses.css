@@ -99,8 +99,7 @@ form h2 {
   width: 0;
 }
 
-.checkbox-container::before {
-  content: "";
+.checkbox-container .checkmark {
   position: absolute;
   left: 0;
   top: 2px;
@@ -112,16 +111,16 @@ form h2 {
   transition: 0.3s ease;
 }
 
-.checkbox-container input:checked ~ ::before {
+.checkbox-container input:checked ~ .checkmark {
   background-color: #667eea;
   border-color: #667eea;
 }
 
-.checkbox-container input:checked ~ ::after {
+.checkbox-container input:checked ~ .checkmark::after {
   content: "";
   position: absolute;
   left: 7px;
-  top: 6px;
+  top: 2px;
   width: 5px;
   height: 10px;
   border: solid white;
